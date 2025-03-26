@@ -1,6 +1,21 @@
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: "Red Hat Text", sans-serif;
+    font-family: "Geo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -10,16 +25,57 @@ body {
 }
 
 header {
-    background: rgb(2,0,36);
-    background: linear-gradient(36deg, rgba(2,0,36,1) 0%, rgba(94,9,121,1) 32%, rgba(0,212,255,1) 100%);
+    background-image: url(../img/Star_8bit_BG.png);
     height: 100vb;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes star_animation {
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 0 10000px; /* end after exactly one image width */
+    }
+}
+
+@keyframes movimiento_nave {
+    0%{
+        padding: 80px 100px 0px 0px;
+    }
+    50%{
+        padding: 80px 0px 0px 100px;
+    }
+    100%{
+        padding: 80px 100px 0px 0px;
+    }
+}
+
+
+.movimiento_nave {
+    animation:movimiento_nave 5s infinite ease-in-out;
+}
+
+.star_animation {
+    animation:star_animation 180s infinite linear;
 }
 
 header .img_header {
     width: 200px;
     object-fit: contain;
     margin: 0 auto;
-    padding-top: 30vb;    
+    padding-top: 25vb;    
+}
+header .nave {
+    max-width: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+    padding-top: 80px; 
+}
+header .nave img {
+    width: 100px;
 }
 
 header img {
