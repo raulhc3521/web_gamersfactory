@@ -12,6 +12,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    background-image: url(../img/Star_8bit_BG.png);
 }
 
 h1, h2, h3 {
@@ -24,12 +25,47 @@ h1, h2, h3 {
     padding: 0;
 }
 
-header {
-    background-image: url(../img/Star_8bit_BG.png);
-    height: 100vb;
+/*navbar*/
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+.navbar-desk {
+    height: 50px;
     margin: 0;
     padding: 0;
 }
+
+.navL {
+    height: 50px;
+    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 0%);
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+.navC {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.navR {
+    height: 50px;
+    clip-path: polygon(0% 0, 100% 0%, 100% 0, 0 100%);
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+.navC img {
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
 
 @keyframes star_animation {
     0%{
@@ -37,7 +73,7 @@ header {
     }
 
     100%{
-        background-position: 0 10000px; /* end after exactly one image width */
+        background-position: 0 10000px;
     }
 }
 
@@ -62,12 +98,7 @@ header {
     animation:star_animation 180s infinite linear;
 }
 
-header .img_header {
-    width: 200px;
-    object-fit: contain;
-    margin: 0 auto;
-    padding-top: 25vb;    
-}
+
 header .nave {
     max-width: 100px;
     object-fit: contain;
@@ -76,36 +107,4 @@ header .nave {
 }
 header .nave img {
     width: 100px;
-}
-
-header img {
-    width: 200px;
-}
-
-header h2, header p {
-    text-align: center;
-    margin: 20px 0 10px 0;
-}
-
-header h2 {
-    padding-top: 0px;
-   font-weight: 400;
-}
-p {
-    color: #f033c1;
-}
-.igicon {
-    width: 40px;
-    transition: ease-in-out 0.2s;
-    
-}
-
-.center {
-    width: 40px;
-    margin: 0 auto;
-}
-
-.igicon:hover {
-    transition: ease-in-out 0.2s;
-    filter: hue-rotate(-30deg);
 }
